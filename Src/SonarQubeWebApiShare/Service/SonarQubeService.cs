@@ -8,7 +8,7 @@ internal class SonarQubeService(Uri host, IAuthenticator? authenticator, string 
 {
     private const int limit = 500;
 
-    protected override string? AuthenticationTestUrl => "api/v1/hardware?limit=1&offset=0";
+    protected override string? AuthenticationTestUrl => "api/server/version";
 
     //protected override async Task ErrorCheckAsync(HttpResponseMessage response, string memberName, CancellationToken cancellationToken)
     //{

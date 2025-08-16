@@ -11,6 +11,6 @@ public class SonarQubeVersionUnitTest : SonarQubeBaseUnitTest
         var version = await sonarQube.GetVersionAsync();
 
         Assert.IsNotNull(version, "SonarQube version is null");
-        Assert.AreEqual(new Version(1,2,2,2), version, nameof(version));
+        Assert.AreEqual(new Version(2025,1,1,104738), version, nameof(version));
     }
 }

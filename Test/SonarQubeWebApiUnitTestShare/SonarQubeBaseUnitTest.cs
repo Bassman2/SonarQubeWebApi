@@ -2,7 +2,7 @@
 
 public abstract class SonarQubeBaseUnitTest
 {
-    protected const string storeKey = "sonarcube";
+    protected const string storeKey = "sonarqube";
     
     protected const string appName = "UnitTest";
 }
