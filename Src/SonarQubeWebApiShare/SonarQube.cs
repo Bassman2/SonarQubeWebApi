@@ -1,6 +1,6 @@
 ﻿namespace SonarQubeWebApi;
 
-public class SonarQube : JsonService
+public sealed class SonarQube : JsonService
 {
     ///// <summary>
     ///// Initializes a new instance of the <see cref="SonarQube"/> class using a store key and application name.
