@@ -1,4 +1,4 @@
-﻿namespace SonarQubeWebApi.Service.Model;
+﻿namespace SonarQubeWebApi.Model;
 
 [JsonSourceGenerationOptions(
     JsonSerializerDefaults.Web,

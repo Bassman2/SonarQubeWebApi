@@ -6,5 +6,4 @@ global using System.Text;
 global using WebServiceClient;
 global using WebServiceClient.Store;
 
-global using SonarQubeWebApi.Service;
-global using SonarQubeWebApi.Service.Model;
+global using SonarQubeWebApi.Model;
