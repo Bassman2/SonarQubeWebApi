@@ -1,6 +1,6 @@
 ﻿namespace SonarQubeWebApi;
 
-public class SonarQube : IDisposable
+public class SonarQube : JsonBaseClient, IDisposable
 {
     private SonarQubeService? service;
 
@@ -37,11 +37,11 @@ public class SonarQube : IDisposable
         GC.SuppressFinalize(this);
     }
 
-    public async Task<Version?> GetVersionAsync(CancellationToken cancellationToken = default)
-    {
-        WebServiceException.ThrowIfNullOrNotConnected(this.service);
+    //public async Task<Version?> GetVersionAsync(CancellationToken cancellationToken = default)
+    //{
+    //    WebServiceException.ThrowIfNullOrNotConnected(this.service);
 
-        var res = await service.GetVersionAsync(cancellationToken);
-        return new Version(res!);
-    }
+    //    var res = await service.GetVersionAsync(cancellationToken);
+    //    return new Version(res!);
+    //}
 }

@@ -3,7 +3,7 @@
 
 // https://sonarqube-pj-cos-1.ebgroup.elektrobit.com/web_api/api/server?deprecated=true&internal=true
 
-internal class SonarQubeService(Uri host, IAuthenticator? authenticator, string appName)
+public class SonarQubeService(Uri host, IAuthenticator? authenticator, string appName)
     : JsonService(host, authenticator, appName, SourceGenerationContext.Default)
 {
     private const int limit = 500;
@@ -29,11 +29,20 @@ internal class SonarQubeService(Uri host, IAuthenticator? authenticator, string 
     
 
 
-    public async Task<string?> GetVersionAsync(CancellationToken cancellationToken)
+    public override async Task<Version> GetVersionAsync(CancellationToken cancellationToken)
     {
         WebServiceException.ThrowIfNotConnected(client);
 
         var res = await GetStringAsync("api/server/version", cancellationToken);
-        return res;
+        return new Version(res!);
     }
+
+    public override async Task<string> GetVersionStringAsync(CancellationToken cancellationToken)
+    {
+        WebServiceException.ThrowIfNotConnected(client);
+
+        var res = await GetStringAsync("api/server/version", cancellationToken);
+        return res!;
+    }
+
 }
