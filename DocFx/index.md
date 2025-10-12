@@ -2,14 +2,14 @@
 _layout: landing
 ---
 
-## JenkinsWebApi 
+## SonarQubeWebApi 
 
-JenkinsWebApi is a .NET API for the Jenkins web service.	
+SonarQubeWebApi is a .NET API for the SonarQube web service.	
 		
 ### Getting Started
 
 
-To get started, add the JenkinsWebApi package to your project.
+To get started, add the SonarQubeWebApi package to your project.
 
 
 
