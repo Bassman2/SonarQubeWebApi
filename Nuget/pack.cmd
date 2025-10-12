@@ -1,0 +1,1 @@
+nuget pack SonarQubeWebApi.nuspec -properties Configuration=Release
